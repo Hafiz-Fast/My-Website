@@ -1,0 +1,306 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio Website</title>
+    <link rel="stylesheet" href="StyleSheet1.css" />
+    <script src="https://kit.fontawesome.com/cc1bcf5042.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div id="name">
+            <span>A</span>rham
+        </div>
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#About">About</a></li>
+                    <li><a href="#Services">Services</a></li>
+                    <li><a href="#Project">Portfolio</a></li>
+                    <li><a href="#Contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="headertext">
+            <p>Computer Scientist</p>
+            <h1>Hi, I'm <span>Arham Zeeshan</span></h1>
+        </div>
+    </div>
+    <!--About Section-->
+    <div id="About">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/Me3.jpg" />
+                </div>
+                <div class="about-col-2">
+                    <h1 class="subtitle">About Me</h1>
+                    <p>
+                        I am a sophomore Computer Science student with a strong foundation in programming and a passion for exploring diverse areas of technology. My experience spans working with Assembly Language and development tools like SFML and Unity, where I’ve created projects that merge creativity with technical problem-solving.
+                    </p>
+                    <div class="tabtitles">
+                        <p class="tablinks active" onclick="opentab('education')">Education</p>
+                        <p class="tablinks" onclick="opentab('skills')">Skills</p>
+                        <p class="tablinks" onclick="opentab('experience')">Experience</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="education">
+                        <ul>
+                            <li><span>Matriculation</span><br />Unique Group of Institutions (UGI))</li>
+                            <li><span>F.Sc. Pre-Engineering</span><br />Punjab Group of Colleges (PGC)</li>
+                            <li><span>BS Computer Science</span><br />National University of Computer and Emerging Sciences (FAST-NUCES)</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="skills">
+                        <ul>
+                            <li><span>Problem Solving</span><br />Data Structures /OOP /PF</li>
+                            <li><span>Logic Building</span><br />C++ /Assembly-Language</li>
+                            <li><span>Game Development</span><br />Unity /C# /SFML</li>
+                            <li><span>Web Development</span><br />Html /CSS /JavaScript</li>
+                            <li><span>Soft Skills</span><br />Communication /Documentation /Writing</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>DSA</span><br />FLAN Network</li>
+                            <li><span>Assembly Language</span><br />Video Memory and Multitasking</li>
+                            <li><span>OOP</span><br />Management Systems Development</li>
+                            <li><span>Unity</span><br />2D Game Development</li>
+                            <li><span>SFML</span><br />2D Game Development</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Services Section-->
+    <div id="Services">
+        <div class="container">
+            <!--As you can see every section uses same container class-->
+            <h1 class="subtitle">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <h2>Game Development</h2>
+                    <p>
+                        I have worked on 2d Game Development using various platforms such as
+                        SFML (Simple and Fast Multi-Media Library of C++), Unity, and Assembly Language.
+                    </p>
+                    <a href="#">Learn More</a>
+                </div>
+                <div>
+                    <h2>Web Development</h2>
+                    <p>
+                        I have recently worked with html, css, and javascript, exploring Web design and development
+                        in order to apply my programming knowledge and make projects on Web-Surface like this Potfolio Website.
+                    </p>
+                    <a href="#">Learn More</a>
+                </div>
+                <div>
+                    <h2>Software Development</h2>
+                    <p>
+                        I can apply the knowledge of Object Oriented Programming and Data Structures to make useful software systems like
+                        Bank-Management system, Store-Management systems e.t.c.
+                    </p>
+                    <a href="#">Learn More</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!--Projects Section-->
+    <div id="Project">
+        <div class="container">
+            <h1 class="subtitle">My Projects</h1>
+            <div class="work-list">
+                <div class="work">
+                    <video controls width="100%" height="auto" poster="images/flap.png">
+                        <source src="images/1225/1225.mp4" type="video/mp4" />
+                    </video>
+                    <div class="layer">
+                        <h3>Flappy Bird</h3>
+                        <p>
+                            The classic flappy bird game recreated in Assembly Language
+                            (16-bit with x88 architecture) using Display Memory, Hardware interupts,
+                            Software interupts, String instructions, and Multitasking. The key features of this
+                            project include: 1, Loading Screen 2, Captivating Intro Screen 3,
+                            Smooth birds and pillars animation 4, Score Management 5, Music Integration 6,
+                            Collision Detection
+                        </p>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/oop.png" />
+                    <div class="layer">
+                        <h3>Pharmacy Management System</h3>
+                        <p>
+                            An Object-Oriented Programming project in C++ for a Pharmacy Management
+                            System that demonstrates concepts like Abstraction, Inheritance, and
+                            Polymorphism. It includes features such as medicine purchase, cart management,
+                            employee management, subscription cards with discounts, and a graphical user interface.
+                        </p>
+                    </div>
+                </div>
+                <div class="work">
+                    <!--<img src="images/unity.png" />-->
+                    <video controls width="100%" height="auto" poster="images/unity.png">
+                        <source src="images/night.mp4" type="video/mp4" />
+                    </video>
+                    <div class="layer">
+                        <h3>Nightmare Hunter</h3>
+                        <p>
+                            Nightmare Hunter is an exciting 2D shooting game made in unity, set in a dark,
+                            eerie world filled with skeletons and zombies.
+                            The game involves running, jumping, and shooting through challenging platforms
+                            while battling the undead.
+                        </p>
+                    </div>
+                </div>
+                <div class="work">
+                    <video controls width="100%" height="auto" poster="images/Tile.png">
+                        <source src="images/Tile.mp4" type="video/mp4" />
+                    </video>
+                    <div class="layer">
+                        <h3>Tile Vania</h3>
+                        <p>
+                            Made in Unity, this exciting platformer features three challenging levels filled with hazards and enemies.
+                            Players can jump, shoot, and navigate through dynamic gameplay to reach the end of each level.
+                            With three lives, the game restarts automatically upon death, ensuring nonstop action.
+                        </p>
+                    </div>
+                </div>
+                <div class="work">
+                    <video controls width="100%" height="auto" poster="images/brick.png">
+                        <source src="images/brick.mp4" type="video/mp4" />
+                    </video>
+                    <div class="layer">
+                        <h3>Brick Breaker</h3>
+                        <p>
+                            A Fun and Creative SFML Project using C++ which uses the Graphical and Audio Features of SFML Library.
+                            The Brick Breaker game which allows the user to break the bricks using paddle with the help of ball.
+                            The game provide Interactive Colors, Graphics, Smooth Movement, Adjustable Speed, and Adorable sounds.
+                        </p>
+                    </div>
+                </div>
+                <div class="work">
+                    <video controls width="100%" height="auto" poster="images/red.png">
+                        <source src="images/Red.mp4" type="video/mp4" />
+                    </video>
+                    <div class="layer">
+                        <h3>Road Rider</h3>
+                        <p>
+                            Road Ride Hop on your bike and get ready for a fun ride in this 2D platformer.
+                            Perform stunts, jump over hurdles, and navigate tricky paths.
+                            Whether you're flipping in the air or speeding through levels, it's all about the thrill of the ride!
+                        </p>
+                    </div>
+                </div>
+                <div class="work">
+                    <video controls width="100%" height="auto" poster="images/blue.png">
+                        <source src="images/blue.mp4" type="video/mp4" />
+                    </video>
+                    <div class="layer">
+                        <h3>Snow Boarder</h3>
+                        <p>
+                            Snow Boarder Experience the thrill of snowboarding in this 2D skating platform game.
+                            Glide through snowy terrains, overcome challenging obstacles, and perform cool tricks.
+                            It's all about balance and precision on the icy slopes!
+                        </p>
+                    </div>
+                </div>
+                <div class="work">
+                    <video controls width="100%" height="auto" poster="images/green.png">
+                        <source src="images/green.mp4" type="video/mp4" />
+                    </video>
+                    <div class="layer">
+                        <h3>Delivery Driver</h3>
+                        <p>
+                            Step into the role of a delivery driver navigating through a vibrant town.
+                            Your mission is to deliver various parcels while dodging obstacles and managing time.
+                            Can you handle the pressure and deliver all the parcels on time!
+                        </p>
+                    </div>
+                </div>
+                <div class="work">
+                    <video controls width="100%" height="auto" poster="images/purple.jpg">
+                        <source src="images/purple.mp4" type="video/mp4" />
+                    </video>
+                    <div class="layer">
+                        <h3>Lazer Defender</h3>
+                        <p>
+                            In Lazer Defender, you'll navigate through intense battles, strategically
+                            shooting down incoming threats, and aiming for the highest score.
+                            The game is designed to test your reflexes and strategic thinking,
+                            offering a thrilling experience for all arcade game lovers!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Contact Section-->
+    <div id="Contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="subtitle">Contact Me</h1>
+                    <p><i class="fa-sharp fa-solid fa-paper-plane"></i>arhamzeeshan617@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i>92-3324434300</p>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/arham-zeeshan-5a77842a6/"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/Hafiz-Fast"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required />
+                        <input type="text" name="Email" placeholder="Your Email" required />
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--JavaScript-->
+    <script>
+        var tablinks = document.getElementsByClassName("tablinks");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active");
+            }
+
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+    </script>
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzzSwXRZbonzUjSUfXhYuL79DVbtPgRkIRvWGNqe-ygxax4KHQtEwpJ50ZTHpQbxi4WAw/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg")
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    msg.innerHTML = "Your Response has been submitted!"
+                    setTimeout(function () {
+                        msg.innerHTML = ""
+                    }, 5000)
+                    form.reset()
+                })
+                .catch(error => console.error('Error!', error.message))
+        })
+    </script>
+
+</body>
+</html>
