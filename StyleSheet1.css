@@ -99,7 +99,7 @@ nav ul li a:hover::after{
 }
 .subtitle{
     font-weight:600;
-    margin-bottom:5%;
+    margin-bottom:4%;
     color:white;
 }
 .tabtitles{
@@ -129,9 +129,9 @@ nav ul li a:hover::after{
 .tab-contents ul li{
     list-style:none;        /* To remove dots */
     margin:10px 0px;        /* Top-bottom left-right */
+    font-size:17px;
 }
 .tab-contents ul li span{
-    font-size:14px;
     color:palevioletred;
 }
 .tab-contents{
@@ -139,6 +139,9 @@ nav ul li a:hover::after{
 }
 .tab-contents.active-tab{
     display:block;
+}
+.Intro{
+    font-size: 18px;
 }
 /*Services*/
 #Services {

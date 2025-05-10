@@ -37,8 +37,8 @@
                 </div>
                 <div class="about-col-2">
                     <h1 class="subtitle">About Me</h1>
-                    <p>
-                        I am a sophomore Computer Science student with a strong foundation in programming and a passion for exploring diverse areas of technology. My experience spans working with Assembly Language and development tools like SFML and Unity, where I’ve created projects that merge creativity with technical problem-solving.
+                    <p class="Intro">
+                        I am a sophomore Computer Science student with a strong foundation in programming and a passion for exploring diverse areas of technology. My experience spans working with React.js, Node.js, and MS SQL for full-stack development, and previously with Assembly Language, Python, and Unity, combining creativity with technical skills.
                     </p>
                     <div class="tabtitles">
                         <p class="tablinks active" onclick="opentab('education')">Education</p>
@@ -47,7 +47,7 @@
                     </div>
                     <div class="tab-contents active-tab" id="education">
                         <ul>
-                            <li><span>Matriculation</span><br />Unique Group of Institutions (UGI))</li>
+                            <li><span>Matriculation</span><br />Unique Group of Institutions (UGI)</li>
                             <li><span>F.Sc. Pre-Engineering</span><br />Punjab Group of Colleges (PGC)</li>
                             <li><span>BS Computer Science</span><br />National University of Computer and Emerging Sciences (FAST-NUCES)</li>
                         </ul>
@@ -57,23 +57,17 @@
                             <li><span>Problem Solving</span><br />Data-Structures / OOP / PF</li>
                             <li><span>Logic Building</span><br />C / C++ / Assembly-Language</li>
                             <li><span>Game Development</span><br />Unity / C# / SFML / Pygame</li>
-                            <li><span>Web Development</span><br />Html / CSS / JavaScript</li>
+                            <li><span>Web Development</span><br />Html / CSS / JavaScript / React.js / Node.js</li>
                             <li><span>AI Development</span><br />Python / Chatbot / Dialogflow</li>
                         </ul>
                     </div>
                     <div class="tab-contents" id="experience">
                         <ul>
                             <li>
-                                <span>Lab Demonstrator</span><br />As Lab Demonstrator of Computer Organization and Assembly Language,
+                                <span>Lab Demonstrator at FAST</span><br />As Lab Demonstrator of Computer Organization and Assembly Language,
                                 My task is to help students in understanding,
                                 building and rectifying logic, especially when it come towards
                                 Assembly Language.
-                            </li>
-                            <li>
-                                <span>AI Development with Python</span><br />This course gave me an overview of AI in the light of Python.
-                                I learnt about Linear Regression and how to use it to predict future outcomes.
-                                Moreover, I learnt how to develop a chatbot using python. At the end,
-                                I develop an Email or Application Generating chatbot.
                             </li>
                         </ul>
                     </div>
@@ -89,21 +83,21 @@
             <div class="services-list">
                 <div>
                     <h2>Game Development</h2>
-                    <p>
+                    <p class="Intro">
                         I have worked on 2d Game Development using various platforms such as
                         SFML (Simple and Fast Multi-Media Library of C++), Unity, and Assembly Language.
                     </p>
                 </div>
                 <div>
                     <h2>Web Development</h2>
-                    <p>
-                        I have recently worked with html, css, and javascript, exploring Web design and development
-                        in order to apply my programming knowledge and make projects on Web-Surface like this Potfolio Website.
+                    <p class="Intro">
+                        I have recently worked with React.js and Node.js, exploring Web design and development
+                        in order to apply my programming knowledge and make projects on Web-Surface.
                     </p>
                 </div>
                 <div>
                     <h2>AI Development</h2>
-                    <p>
+                    <p class="Intro">
                         I have recently worked with Google Dialogflow ES, to make chatbots like Currency Converter which
                         can be integrated in any website. I have built an email-generating chatbot with Python and am exploring further.
                     </p>
@@ -118,7 +112,20 @@
             <h1 class="subtitle">My Projects</h1>
             <div class="work-list">
                 <div class="work">
-                    <video controls width="100%" height="auto" poster="images/flap.png">
+                    <video controls width="100%" height="50%" poster="images/MovieMate.png">
+                        <source src="images/MovieMate.mp4" type="video/mp4" />
+                    </video>
+                    <div class="layer">
+                        <h3>Movie Mate1</h3>
+                        <p>
+                            Developed a full-stack cinema booking platform using React.js for the frontend and Node.js for the backend.
+                            Integrated MS SQL Server to manage users, showtimes, bookings, and theater data efficiently.
+                            Built RESTful APIs to support features like authentication, movie search, seat selection, and ticket booking.
+                        </p>
+                    </div>
+                </div>
+                <div class="work">
+                    <video controls width="100%" height="50%" poster="images/flap.png">
                         <source src="images/1225/1225.mp4" type="video/mp4" />
                     </video>
                     <div class="layer">
@@ -146,8 +153,7 @@
                     </div>
                 </div>
                 <div class="work">
-                    <!--<img src="images/unity.png" />-->
-                    <video controls width="100%" height="auto" poster="images/unity.png">
+                    <video controls width="100%" height="50%" poster="images/unity.png">
                         <source src="images/night.mp4" type="video/mp4" />
                     </video>
                     <div class="layer">
@@ -161,20 +167,7 @@
                     </div>
                 </div>
                 <div class="work">
-                    <video controls width="100%" height="auto" poster="images/Tile.png">
-                        <source src="images/Tile.mp4" type="video/mp4" />
-                    </video>
-                    <div class="layer">
-                        <h3>Tile Vania</h3>
-                        <p>
-                            Made in Unity, this exciting platformer features three challenging levels filled with hazards and enemies.
-                            Players can jump, shoot, and navigate through dynamic gameplay to reach the end of each level.
-                            With three lives, the game restarts automatically upon death, ensuring nonstop action.
-                        </p>
-                    </div>
-                </div>
-                <div class="work">
-                    <video controls width="100%" height="auto" poster="images/brick.png">
+                    <video controls width="100%" height="50%" poster="images/brick.png">
                         <source src="images/brick.mp4" type="video/mp4" />
                     </video>
                     <div class="layer">
@@ -187,33 +180,7 @@
                     </div>
                 </div>
                 <div class="work">
-                    <video controls width="100%" height="auto" poster="images/red.png">
-                        <source src="images/Red.mp4" type="video/mp4" />
-                    </video>
-                    <div class="layer">
-                        <h3>Road Rider</h3>
-                        <p>
-                            Road Ride Hop on your bike and get ready for a fun ride in this 2D platformer.
-                            Perform stunts, jump over hurdles, and navigate tricky paths.
-                            Whether you're flipping in the air or speeding through levels, it's all about the thrill of the ride!
-                        </p>
-                    </div>
-                </div>
-                <div class="work">
-                    <video controls width="100%" height="auto" poster="images/blue.png">
-                        <source src="images/blue.mp4" type="video/mp4" />
-                    </video>
-                    <div class="layer">
-                        <h3>Snow Boarder</h3>
-                        <p>
-                            Snow Boarder Experience the thrill of snowboarding in this 2D skating platform game.
-                            Glide through snowy terrains, overcome challenging obstacles, and perform cool tricks.
-                            It's all about balance and precision on the icy slopes!
-                        </p>
-                    </div>
-                </div>
-                <div class="work">
-                    <video controls width="100%" height="auto" poster="images/chat.png">
+                    <video controls width="100%" height="50%" poster="images/chat.png">
                         <source src="images/chat.mp4" type="video/mp4" />
                     </video>
                     <div class="layer">
@@ -222,20 +189,6 @@
                             Sam is powered by Google Dialogflow and a Flask-based Python backend,
                             making currency conversion quick and easy. It was a fun project exploring
                             chatbot development and API integration.
-                        </p>
-                    </div>
-                </div>
-                <div class="work">
-                    <video controls width="100%" height="auto" poster="images/purple.jpg">
-                        <source src="images/purple.mp4" type="video/mp4" />
-                    </video>
-                    <div class="layer">
-                        <h3>Lazer Defender</h3>
-                        <p>
-                            In Lazer Defender, you'll navigate through intense battles, strategically
-                            shooting down incoming threats, and aiming for the highest score.
-                            The game is designed to test your reflexes and strategic thinking,
-                            offering a thrilling experience for all arcade game lovers!
                         </p>
                     </div>
                 </div>
