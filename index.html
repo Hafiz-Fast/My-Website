@@ -1,263 +1,191 @@
 ﻿<!DOCTYPE html>
-
 <html lang="en">
+
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Portfolio Website</title>
-    <link rel="stylesheet" href="StyleSheet1.css" />
-    <script src="https://kit.fontawesome.com/cc1bcf5042.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio Website</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap">
+  <link rel="stylesheet" href="StyleSheet1.css" />
 </head>
+
 <body>
-    <div id="header">
-        <div id="name">
-            <span>A</span>rham
-        </div>
-        <div class="container">
-            <nav>
-                <ul>
-                    <li><a href="#header">Home</a></li>
-                    <li><a href="#About">About</a></li>
-                    <li><a href="#Services">Services</a></li>
-                    <li><a href="#Project">Portfolio</a></li>
-                    <li><a href="#Contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-        <div class="headertext">
-            <p>Computer Scientist</p>
-            <h1>Hi, I'm <span>Arham Zeeshan</span></h1>
-        </div>
+  <header class="hero">
+    <nav>
+      <div class="logo">A<span>rham</span></div>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="hero-text">
+      <h1>Hi, I'm <span class="typewriter" data-text="Arham Zeeshan"></span></h1>
+      <p>Computer Scientist | Full-Stack Enthusiast</p>
     </div>
-    <!--About Section-->
-    <div id="About">
-        <div class="container">
-            <div class="row">
-                <div class="about-col-1">
-                    <img src="images/Me3.jpg" />
-                </div>
-                <div class="about-col-2">
-                    <h1 class="subtitle">About Me</h1>
-                    <p class="Intro">
-                        I am a sophomore Computer Science student with a strong foundation in programming and a passion for exploring diverse areas of technology. My experience spans working with React.js, Node.js, and MS SQL for full-stack development, and previously with Assembly Language, Python, and Unity, combining creativity with technical skills.
-                    </p>
-                    <div class="tabtitles">
-                        <p class="tablinks active" onclick="opentab('education')">Education</p>
-                        <p class="tablinks" onclick="opentab('skills')">Skills</p>
-                        <p class="tablinks" onclick="opentab('experience')">Experience</p>
-                    </div>
-                    <div class="tab-contents active-tab" id="education">
-                        <ul>
-                            <li><span>Matriculation</span><br />Unique Group of Institutions (UGI)</li>
-                            <li><span>F.Sc. Pre-Engineering</span><br />Punjab Group of Colleges (PGC)</li>
-                            <li><span>BS Computer Science</span><br />National University of Computer and Emerging Sciences (FAST-NUCES)</li>
-                        </ul>
-                    </div>
-                    <div class="tab-contents" id="skills">
-                        <ul>
-                            <li><span>Problem Solving</span><br />Data-Structures / OOP / PF</li>
-                            <li><span>Logic Building</span><br />C / C++ / Assembly-Language</li>
-                            <li><span>Game Development</span><br />Unity / C# / SFML / Pygame</li>
-                            <li><span>Web Development</span><br />Html / CSS / JavaScript / React.js / Node.js</li>
-                            <li><span>AI Development</span><br />Python / Chatbot / Dialogflow</li>
-                        </ul>
-                    </div>
-                    <div class="tab-contents" id="experience">
-                        <ul>
-                            <li>
-                                <span>Lab Demonstrator at FAST</span><br />As Lab Demonstrator of Computer Organization and Assembly Language,
-                                My task is to help students in understanding,
-                                building and rectifying logic, especially when it come towards
-                                Assembly Language.
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+  </header>
+
+  <section id="about" class="glass-section">
+    <div class="container">
+      <div class="about-img">
+        <img src="images/Me3.jpg" alt="Arham" />
+      </div>
+      <div class="about-text">
+        <h2>About Me</h2>
+        <p>I’m a Computer Science student at FAST-NUCES with experience in Unity, C++, Assembly Language, Web Dev (React/Node), and AI (Chatbots & Dialogflow). Passionate about building tech from games to bots.</p>
+        <div class="tabs">
+          <button class="tablink active" onclick="openTab('skills')">Skills</button>
+          <button class="tablink" onclick="openTab('education')">Education</button>
+          <button class="tablink" onclick="openTab('experience')">Experience</button>
         </div>
-    </div>
-    <!--Services Section-->
-    <div id="Services">
-        <div class="container">
-            <!--As you can see every section uses same container class-->
-            <h1 class="subtitle">My Services</h1>
-            <div class="services-list">
-                <div>
-                    <h2>Game Development</h2>
-                    <p class="Intro2">
-                        I have worked on 2d Game Development using various platforms such as
-                        SFML (Simple and Fast Multi-Media Library of C++), Unity, and Assembly Language.
-                    </p>
-                </div>
-                <div>
-                    <h2>Web Development</h2>
-                    <p class="Intro2">
-                        I have recently worked with React.js and Node.js, exploring Web design and development
-                        in order to apply my programming knowledge and make projects on Web-Surface.
-                    </p>
-                </div>
-                <div>
-                    <h2>AI Development</h2>
-                    <p class="Intro2">
-                        I have recently worked with Google Dialogflow ES, to make chatbots like Currency Converter which
-                        can be integrated in any website. I have built an email-generating chatbot with Python and am exploring further.
-                    </p>
-                </div>
-            </div>
-
+        <div id="skills" class="tab-content active">
+          <ul>
+            <li><strong>Languages:</strong> C++, C, Python, Assembly, JavaScript</li>
+            <li><strong>Web:</strong> HTML, CSS, React.js, Node.js</li>
+            <li><strong>Game Dev:</strong> Unity, SFML, Pygame</li>
+            <li><strong>AI:</strong> Chatbots, Dialogflow, Flask</li>
+          </ul>
         </div>
-    </div>
-    <!--Projects Section-->
-    <div id="Project">
-        <div class="container">
-            <h1 class="subtitle">My Projects</h1>
-            <div class="work-list">
-                <div class="work">
-                    <video controls width="100%" height="50%" poster="images/MovieMate.png">
-                        <source src="images/MovieMate.mp4" type="video/mp4" />
-                    </video>
-                    <div class="layer">
-                        <h3>Movie Mate1</h3>
-                        <p>
-                            Developed a full-stack cinema booking platform using React.js for the frontend and Node.js for the backend.
-                            Integrated MS SQL Server to manage users, showtimes, bookings, and theater data efficiently.
-                            Built RESTful APIs to support features like authentication, movie search, seat selection, and ticket booking.
-                        </p>
-                    </div>
-                </div>
-                <div class="work">
-                    <video controls width="100%" height="50%" poster="images/flap.png">
-                        <source src="images/1225/1225.mp4" type="video/mp4" />
-                    </video>
-                    <div class="layer">
-                        <h3>Flappy Bird</h3>
-                        <p>
-                            The classic flappy bird game recreated in Assembly Language
-                            (16-bit with x88 architecture) using Display Memory, Hardware interupts,
-                            Software interupts, String instructions, and Multitasking. The key features of this
-                            project include: 1, Loading Screen 2, Captivating Intro Screen 3,
-                            Smooth birds and pillars animation 4, Score Management 5, Music Integration 6,
-                            Collision Detection
-                        </p>
-                    </div>
-                </div>
-                <div class="work">
-                    <img src="images/oop.png" />
-                    <div class="layer">
-                        <h3>Pharmacy Management System</h3>
-                        <p>
-                            An Object-Oriented Programming project in C++ for a Pharmacy Management
-                            System that demonstrates concepts like Abstraction, Inheritance, and
-                            Polymorphism. It includes features such as medicine purchase, cart management,
-                            employee management, subscription cards with discounts, and a graphical user interface.
-                        </p>
-                    </div>
-                </div>
-                <div class="work">
-                    <video controls width="100%" height="50%" poster="images/unity.png">
-                        <source src="images/night.mp4" type="video/mp4" />
-                    </video>
-                    <div class="layer">
-                        <h3>Nightmare Hunter</h3>
-                        <p>
-                            Nightmare Hunter is an exciting 2D shooting game made in unity, set in a dark,
-                            eerie world filled with skeletons and zombies.
-                            The game involves running, jumping, and shooting through challenging platforms
-                            while battling the undead.
-                        </p>
-                    </div>
-                </div>
-                <div class="work">
-                    <video controls width="100%" height="50%" poster="images/brick.png">
-                        <source src="images/brick.mp4" type="video/mp4" />
-                    </video>
-                    <div class="layer">
-                        <h3>Brick Breaker</h3>
-                        <p>
-                            A Fun and Creative SFML Project using C++ which uses the Graphical and Audio Features of SFML Library.
-                            The Brick Breaker game which allows the user to break the bricks using paddle with the help of ball.
-                            The game provide Interactive Colors, Graphics, Smooth Movement, Adjustable Speed, and Adorable sounds.
-                        </p>
-                    </div>
-                </div>
-                <div class="work">
-                    <video controls width="100%" height="50%" poster="images/chat.png">
-                        <source src="images/chat.mp4" type="video/mp4" />
-                    </video>
-                    <div class="layer">
-                        <h3>Currency Converter Chatbot</h3>
-                        <p>
-                            Sam is powered by Google Dialogflow and a Flask-based Python backend,
-                            making currency conversion quick and easy. It was a fun project exploring
-                            chatbot development and API integration.
-                        </p>
-                    </div>
-                </div>
-            </div>
+        <div id="education" class="tab-content">
+          <ul>
+            <li>Matriculation - UGI</li>
+            <li>FSc - PGC</li>
+            <li>BS CS - FAST NUCES</li>
+          </ul>
         </div>
-    </div>
-    <!--Contact Section-->
-    <div id="Contact">
-        <div class="container">
-            <div class="row">
-                <div class="contact-left">
-                    <h1 class="subtitle">Contact Me</h1>
-                    <p><i class="fa-sharp fa-solid fa-paper-plane"></i>arhamzeeshan617@gmail.com</p>
-                    <p><i class="fa-solid fa-phone"></i><span class="PhoneNumber">92-3324434300</span></p>
-                    <div class="social-icons">
-                        <a href="https://www.linkedin.com/in/arham-zeeshan-5a77842a6/"><i class="fa-brands fa-linkedin"></i></a>
-                        <a href="https://github.com/Hafiz-Fast"><i class="fa-brands fa-github"></i></a>
-                    </div>
-                </div>
-                <div class="contact-right">
-                    <form name="submit-to-google-sheet">
-                        <input type="text" name="Name" placeholder="Your Name" required />
-                        <input type="text" name="Email" placeholder="Your Email" required />
-                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-                        <button type="submit">Submit</button>
-                    </form>
-                    <span id="msg"></span>
-                </div>
-            </div>
+        <div id="experience" class="tab-content">
+          <p>Lab Demonstrator (COAL) – Helped peers learn and debug Assembly Language logic with clarity and patience.</p>
         </div>
+      </div>
     </div>
+  </section>
 
-    <!--JavaScript-->
-    <script>
-        var tablinks = document.getElementsByClassName("tablinks");
-        var tabcontents = document.getElementsByClassName("tab-contents");
+  <section id="services">
+    <h2 class="section-title">Services</h2>
+    <div class="services-container">
+      <div class="service-card">
+        <i class="fas fa-gamepad"></i>
+        <h3>Game Dev</h3>
+        <p>Built 2D games using Unity, SFML, and Assembly. Smooth mechanics, score handling, and animation polish.</p>
+      </div>
+      <div class="service-card">
+        <i class="fas fa-code"></i>
+        <h3>Web Dev</h3>
+        <p>React & Node.js full-stack projects with MS SQL backends. RESTful APIs, auth systems, and dynamic UIs.</p>
+      </div>
+      <div class="service-card">
+        <i class="fas fa-brain"></i>
+        <h3>AI/Chatbots</h3>
+        <p>Built smart chatbots with Dialogflow & Python. Integrated APIs and email automation.</p>
+      </div>
+    </div>
+  </section>
 
-        function opentab(tabname) {
-            for (tablink of tablinks) {
-                tablink.classList.remove("active");
-            }
+  <section id="projects">
+    <h2 class="section-title">Featured Projects</h2>
+    <div class="projects-grid">
+      <div class="project-card">
+        <video controls poster="images/MovieMate.png">
+          <source src="images/MovieMate.mp4" type="video/mp4" />
+        </video>
+        <h3>Movie Mate</h3>
+        <p>Full-stack cinema booking app with React + Node + SQL backend. RESTful API, auth, seat booking, etc.</p>
+      </div>
+      <div class="project-card">
+        <video controls poster="images/flap.png">
+          <source src="images/1225/1225.mp4" type="video/mp4" />
+        </video>
+        <h3>Flappy Bird (Assembly)</h3>
+        <p>Game written in 16-bit Assembly: hardware interrupts, memory animation, scoring, music & collision logic.</p>
+      </div>
+      <div class="project-card">
+        <img src="images/oop.png" alt="Pharmacy OOP" />
+        <h3>Pharmacy System (C++)</h3>
+        <p>OOP project using polymorphism, inheritance & GUI for managing medicine, staff, and discounts.</p>
+      </div>
+      <div class="project-card">
+        <video controls poster="images/unity.png">
+          <source src="images/night.mp4" type="video/mp4" />
+        </video>
+        <h3>Nightmare Hunter</h3>
+        <p>Exciting 2D shooting game in Unity. Dark environments, skeletons & zombies, platforming and combat. Optimized for Android also.</p>
+      </div>
+      <div class="project-card">
+        <video controls poster="images/brick.png">
+          <source src="images/brick.mp4" type="video/mp4" />
+        </video>
+        <h3>Brick Breaker</h3>
+        <p>SFML-based colorful C++ game with smooth paddle/ball mechanics, speed variations, and satisfying effects.</p>
+      </div>
+      <div class="project-card">
+        <video controls poster="images/chat.png">
+          <source src="images/chat.mp4" type="video/mp4" />
+        </video>
+        <h3>Currency Converter Chatbot</h3>
+        <p>Built using Dialogflow ES and Python Flask backend. Converts currencies and integrates easily in websites.</p>
+      </div>
+    </div>
+  </section>
 
-            for (tabcontent of tabcontents) {
-                tabcontent.classList.remove("active-tab");
-            }
-            event.currentTarget.classList.add("active");
-            document.getElementById(tabname).classList.add("active-tab");
-        }
+  <section id="contact" class="glass-section">
+    <h2 class="section-title">Contact</h2>
+    <div class="contact-container">
+      <div class="contact-info">
+        <p><i class="fas fa-envelope"></i> arhamzeeshan617@gmail.com</p>
+        <p><i class="fas fa-phone"></i> +92-332-4434300</p>
+        <div class="socials">
+          <a href="https://www.linkedin.com/in/arham-zeeshan-5a77842a6/"><i class="fab fa-linkedin"></i></a>
+          <a href="https://github.com/Hafiz-Fast"><i class="fab fa-github"></i></a>
+        </div>
+      </div>
+      <form name="submit-to-google-sheet">
+        <input type="text" name="Name" placeholder="Your Name" required />
+        <input type="email" name="Email" placeholder="Your Email" required />
+        <textarea name="Message" rows="5" placeholder="Your Message"></textarea>
+        <button type="submit">Send</button>
+        <span id="msg"></span>
+      </form>
+    </div>
+  </section>
 
-    </script>
+  <script>
+    const typewriter = document.querySelector(".typewriter");
+    const text = typewriter.getAttribute("data-text");
+    let index = 0;
+    function type() {
+      if (index < text.length) {
+        typewriter.innerHTML += text.charAt(index);
+        index++;
+        setTimeout(type, 100);
+      }
+    }
+    window.onload = type;
 
-    <script>
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbzzSwXRZbonzUjSUfXhYuL79DVbtPgRkIRvWGNqe-ygxax4KHQtEwpJ50ZTHpQbxi4WAw/exec'
-        const form = document.forms['submit-to-google-sheet']
-        const msg = document.getElementById("msg")
+    function openTab(tabId) {
+      document.querySelectorAll(".tab-content").forEach(tab => tab.classList.remove("active"));
+      document.querySelectorAll(".tablink").forEach(btn => btn.classList.remove("active"));
+      document.getElementById(tabId).classList.add("active");
+      event.currentTarget.classList.add("active");
+    }
 
-        form.addEventListener('submit', e => {
-            e.preventDefault()
-            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-                .then(response => {
-                    msg.innerHTML = "Your Response has been submitted!"
-                    setTimeout(function () {
-                        msg.innerHTML = ""
-                    }, 5000)
-                    form.reset()
-                })
-                .catch(error => console.error('Error!', error.message))
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzzSwXRZbonzUjSUfXhYuL79DVbtPgRkIRvWGNqe-ygxax4KHQtEwpJ50ZTHpQbxi4WAw/exec';
+    const form = document.forms['submit-to-google-sheet'];
+    const msg = document.getElementById("msg");
+
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+        .then(() => {
+          msg.innerHTML = "Message sent successfully!";
+          setTimeout(() => msg.innerHTML = "", 5000);
+          form.reset();
         })
-    </script>
-
+        .catch(error => console.error('Error!', error.message));
+    });
+  </script>
 </body>
+
 </html>
