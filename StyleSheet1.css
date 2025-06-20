@@ -295,12 +295,13 @@
   }
   nav .logo{
     position: relative;
-    left: 46%;
+    left: 50%;
     margin-bottom: 20px;
   }
   nav .nav-links{
     position: relative;
-    left: 10px;
+    left: 27px;
+    gap: 20px;
   }
   .tablink{
     margin-right: 0px;
