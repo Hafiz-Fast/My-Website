@@ -12,16 +12,30 @@
 
 <body>
   <header class="hero">
-    <nav>
-      <div class="logo">A<span>rham</span></div>
+    <nav class="navbar">
+      <a href="#" class="logo">A<span>rham</span></a>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
       <ul class="nav-links">
-        <li><a href="#">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#services">Services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#projects">Projects</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contact">Contact</a>
+        </li>
       </ul>
     </nav>
+
     <div class="hero-text">
       <h1>Hi, I'm <span class="typewriter" data-text="Arham Zeeshan"></span></h1>
       <p>Computer Scientist | Full-Stack Enthusiast</p>
@@ -35,7 +49,8 @@
       </div>
       <div class="about-text">
         <h2>About Me</h2>
-        <p>I’m a Computer Science student at FAST-NUCES with experience in Unity, C++, Assembly Language, Web Dev (React/Node), and AI (Chatbots & Dialogflow). Passionate about building tech from games to bots.</p>
+        <p>I'm a Computer Science student at FAST-NUCES with experience in Unity, C++, Assembly Language, Web Dev
+          (React/Node), and AI (Chatbots & Dialogflow). Passionate about building tech from games to bots.</p>
         <div class="tabs">
           <button class="tablink active" onclick="openTab('skills')">Skills</button>
           <button class="tablink" onclick="openTab('education')">Education</button>
@@ -57,7 +72,8 @@
           </ul>
         </div>
         <div id="experience" class="tab-content">
-          <p>Lab Demonstrator (COAL) – Helped peers learn and debug Assembly Language logic with clarity and patience.</p>
+          <p>Lab Demonstrator (COAL) <br>Helped peers learn and debug Assembly Language logic with clarity and patience.
+          </p>
         </div>
       </div>
     </div>
@@ -88,42 +104,57 @@
     <h2 class="section-title">Featured Projects</h2>
     <div class="projects-grid">
       <div class="project-card">
-        <video controls poster="images/Budget.png">
-          <source src="images/Budget.mp4" type="video/mp4" />
-        </video>
+        <div class="media-container">
+          <video controls poster="images/Budget.png">
+            <source src="images/Budget.mp4" type="video/mp4" />
+          </video>
+        </div>
         <h3>Budget Tracker</h3>
-        <p>Full-stack budget tracker with React, Node.js, and SQL. Includes auth, real-time expense tracking, and mobile support with React Native.</p>
+        <p>Full-stack budget tracker with React, Node.js, and SQL. Includes auth, real-time expense tracking, and
+          mobile
+          support with React Native.</p>
       </div>
       <div class="project-card">
-        <video controls poster="images/MovieMate.png">
-          <source src="images/MovieMate.mp4" type="video/mp4" />
-        </video>
+        <div class="media-container">
+          <video controls poster="images/MovieMate.png">
+            <source src="images/MovieMate.mp4" type="video/mp4" />
+          </video>
+        </div>
         <h3>Movie Mate</h3>
         <p>Full-stack cinema booking app with React + Node + SQL backend. RESTful API, auth, seat booking, etc.</p>
       </div>
       <div class="project-card">
-        <video controls poster="images/flap.png">
-          <source src="images/1225/1225.mp4" type="video/mp4" />
-        </video>
+        <div class="media-container">
+          <video controls poster="images/flap.png">
+            <source src="images/1225/1225.mp4" type="video/mp4" />
+          </video>
+        </div>
         <h3>Flappy Bird (Assembly)</h3>
         <p>Game written in 16-bit Assembly: hardware interrupts, memory animation, scoring, music & collision logic.</p>
       </div>
       <div class="project-card">
-        <video controls poster="images/unity.png">
-          <source src="images/night.mp4" type="video/mp4" />
-        </video>
+        <div class="media-container">
+          <video controls poster="images/unity.png">
+            <source src="images/night.mp4" type="video/mp4" />
+          </video>
+        </div>
         <h3>Nightmare Hunter</h3>
-        <p>Exciting 2D shooting game in Unity. Dark environments, skeletons & zombies, platforming and combat. Optimized for Android also.</p>
+        <p>Exciting 2D shooting game in Unity. Dark environments, skeletons & zombies, platforming and combat. Optimized
+          for Android also.</p>
       </div>
       <div class="project-card">
-        <img src="images/oop.png" alt="Pharmacy OOP" />
+        <div class="media-container">
+          <img src="images/oop.png" alt="Pharmacy OOP" />
+        </div>
         <h3>Pharmacy System (C++)</h3>
         <p>OOP project using polymorphism, inheritance & GUI for managing medicine, staff, and discounts.</p>
       </div>
       <div class="project-card">
-        <video controls poster="images/pacman.png">
-          <source src="images/pacman.mp4" type="video/mp4" />
-        </video>
+        <div class="media-container">
+          <video controls poster="images/pacman.png">
+            <source src="images/pacman.mp4" type="video/mp4" />
+          </video>
+        </div>
         <h3>Pac-Man</h3>
         <p>The Classic Pac-Man Game made in Python using Pygame involving Ghost Movements using BFS Algorithm</p>
       </div>
@@ -132,7 +163,8 @@
           <source src="images/chat.mp4" type="video/mp4" />
         </video>
         <h3>Currency Converter Chatbot</h3>
-        <p>Built using Dialogflow ES and Python Flask backend. Converts currencies and integrates easily in websites.</p>
+        <p>Built using Dialogflow ES and Python Flask backend. Converts currencies and integrates easily in websites.
+        </p>
       </div>
     </div>
   </section>
@@ -159,6 +191,35 @@
   </section>
 
   <script>
+    // Nav toggle functionality
+    const navToggle = document.querySelector('.nav-toggle');
+    const navLinks = document.querySelector('.nav-links');
+
+    navToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+
+      // Change icon between bars and times
+      const icon = navToggle.querySelector('i');
+      if (navLinks.classList.contains('active')) {
+        icon.classList.remove('fa-bars');
+        icon.classList.add('fa-times');
+      } else {
+        icon.classList.remove('fa-times');
+        icon.classList.add('fa-bars');
+      }
+    });
+
+    // Close nav when clicking a link
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+        const icon = navToggle.querySelector('i');
+        icon.classList.remove('fa-times');
+        icon.classList.add('fa-bars');
+      });
+    });
+
+    // Typewriter effect
     const typewriter = document.querySelector(".typewriter");
     const text = typewriter.getAttribute("data-text");
     let index = 0;
@@ -171,6 +232,7 @@
     }
     window.onload = type;
 
+    // Tab functionality
     function openTab(tabId) {
       document.querySelectorAll(".tab-content").forEach(tab => tab.classList.remove("active"));
       document.querySelectorAll(".tablink").forEach(btn => btn.classList.remove("active"));
@@ -178,6 +240,7 @@
       event.currentTarget.classList.add("active");
     }
 
+    // Form submission
     const scriptURL = 'https://script.google.com/macros/s/AKfycbzzSwXRZbonzUjSUfXhYuL79DVbtPgRkIRvWGNqe-ygxax4KHQtEwpJ50ZTHpQbxi4WAw/exec';
     const form = document.forms['submit-to-google-sheet'];
     const msg = document.getElementById("msg");
@@ -191,6 +254,16 @@
           form.reset();
         })
         .catch(error => console.error('Error!', error.message));
+    });
+
+    // Add loading state for videos
+    document.querySelectorAll('video').forEach(video => {
+      video.addEventListener('waiting', () => {
+        video.parentElement.classList.add('video-loading');
+      });
+      video.addEventListener('playing', () => {
+        video.parentElement.classList.remove('video-loading');
+      });
     });
   </script>
 </body>

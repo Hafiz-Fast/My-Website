@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
   scroll-behavior: smooth;
 }
 
@@ -10,26 +9,106 @@ body {
   background: #0f0f0f;
   color: #f0f0f0;
   line-height: 1.6;
+  font-family: 'Poppins', sans-serif;
 }
 
+/* Navbar Styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  background: #0f0f0f;
+}
+
+.logo {
+  font-size: 2rem;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.logo span {
+  color: orangered;
+}
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+.nav-item a {
+  color: white;
+  text-decoration: none;
+  position: relative;
+  transition: 0.3s;
+  font-size: 1rem;
+}
+
+.nav-item a:hover {
+  color: orangered;
+}
+
+.nav-item a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: orangered;
+  transition: width 0.3s;
+}
+
+.nav-item a:hover::after {
+  width: 100%;
+}
+
+/* Hero Section */
 /* Hero Section */
 .hero {
   height: 100vh;
   background: linear-gradient(to right, #0f0f0f, #1c1c1c);
   position: relative;
+  padding-top: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .hero-text {
-  position: absolute;
-  top: 35%;
-  left: 5%;
-  max-width: 600px;
-  animation: fadeIn 1s ease-in-out;
+  text-align: center;
+  max-width: 750px;
+  width: 90%;
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards;
+  padding: 20px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 .hero h1 {
   font-size: 3rem;
   color: orangered;
+  margin-bottom: 20px;
 }
 
 .hero p {
@@ -43,49 +122,17 @@ body {
 }
 
 @keyframes blink {
-  0%, 50%, 100% { opacity: 1; }
-  25%, 75% { opacity: 0; }
-}
 
-/* Nav */
-nav {
-  position: absolute;
-  top: 0;
-  right: 70px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  width: 90%;
-  padding: 20px 5% 0 5%;
-  z-index: 10;
-}
+  0%,
+  50%,
+  100% {
+    opacity: 1;
+  }
 
-.logo {
-  font-size: 2rem;
-  color: white;
-  font-weight: bold;
-}
-
-.logo span {
-  color: orangered;
-}
-
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 30px;
-}
-
-.nav-links a {
-  color: white;
-  text-decoration: none;
-  position: relative;
-  transition: 0.3s;
-}
-
-.nav-links a:hover {
-  color: orangered;
+  25%,
+  75% {
+    opacity: 0;
+  }
 }
 
 /* Section Titles */
@@ -104,12 +151,16 @@ nav {
   border-radius: 20px;
   margin: 40px auto;
   width: 90%;
+  min-height: 500px;
 }
 
 .container {
   display: flex;
   flex-wrap: wrap;
   gap: 40px;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
 }
 
 .about-img img {
@@ -121,10 +172,14 @@ nav {
 .about-text {
   flex: 1;
   min-width: 300px;
+  min-height: 300px;
 }
 
 .tabs {
   margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .tablink {
@@ -132,23 +187,33 @@ nav {
   border: none;
   color: white;
   font-size: 1rem;
-  margin-right: 20px;
   padding: 8px 12px;
   cursor: pointer;
   border-bottom: 2px solid transparent;
+  transition: all 0.3s;
 }
 
 .tablink.active {
   border-bottom: 2px solid orangered;
+  color: orangered;
 }
 
 .tab-content {
   display: none;
   margin-top: 20px;
+  min-height: 200px;
 }
 
 .tab-content.active {
   display: block;
+}
+
+.tab-content ul {
+  list-style-position: inside;
+}
+
+.tab-content li {
+  margin-bottom: 8px;
 }
 
 /* Services */
@@ -180,7 +245,12 @@ nav {
   color: orangered;
 }
 
+.service-card:hover i {
+  color: white;
+}
+
 /* Projects */
+/* Projects Section */
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -193,18 +263,63 @@ nav {
   padding: 20px;
   border-radius: 10px;
   overflow: hidden;
+  transition: transform 0.3s;
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Make all cards equal height */
 }
 
-.project-card video,
-.project-card img {
+/* Media container with fixed aspect ratio (16:9) */
+.media-container {
+  position: relative;
   width: 100%;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  overflow: hidden;
   border-radius: 8px;
   margin-bottom: 15px;
 }
 
+.media-container video,
+.media-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures media fills container */
+}
+
 .project-card h3 {
   color: orangered;
-  margin-bottom: 10px;
+  margin: 15px 0 10px;
+  min-height: 3rem; /* Fixed height for titles */
+}
+
+.project-card p {
+  flex-grow: 1; /* Makes description take remaining space */
+  margin-bottom: 15px;
+}
+
+/* Loading indicator for videos */
+.media-container.video-loading::after {
+  content: "Loading...";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  z-index: 2;
+}
+
+.media-container.video-loading::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+  z-index: 1;
 }
 
 /* Contact */
@@ -213,6 +328,7 @@ nav {
   flex-wrap: wrap;
   gap: 40px;
   padding: 0 10% 60px;
+  justify-content: center;
 }
 
 .contact-info {
@@ -221,13 +337,20 @@ nav {
 }
 
 .contact-info p {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   font-size: 1rem;
+  display: flex;
+  align-items: center;
 }
 
 .contact-info i {
   color: orangered;
   margin-right: 10px;
+  font-size: 1.2rem;
+}
+
+.socials {
+  margin-top: 30px;
 }
 
 .socials a {
@@ -253,21 +376,29 @@ form textarea {
   background: #262626;
   border: none;
   color: white;
-  padding: 10px;
+  padding: 15px;
   margin-bottom: 15px;
   border-radius: 6px;
   font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+form textarea {
+  resize: vertical;
+  min-height: 120px;
 }
 
 form button {
   background: orangered;
   border: none;
   color: white;
-  padding: 12px;
+  padding: 15px;
   font-size: 1rem;
   border-radius: 6px;
   cursor: pointer;
   transition: 0.3s;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
 }
 
 form button:hover {
@@ -277,39 +408,79 @@ form button:hover {
 #msg {
   margin-top: 10px;
   color: lawngreen;
+  text-align: center;
 }
 
 /* Animations */
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(30px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-/* Responsive Styling for Android */
-@media only screen and (max-width: 768px) {
-  .hero .hero-text h1{
-    text-align: center;
+/* Mobile styles */
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: block;
   }
-  .hero .hero-text p{
-    text-align: center;
-  }
-  nav .logo{
-    position: relative;
-    left: 48%;
-    margin-bottom: 20px;
-  }
-  nav .nav-links{
-    position: relative;
-    left: 25px;
-    gap: 20px;
-  }
-  .tablink{
-    margin-right: 0px;
-  }
-  .contact-info p {
-    display: flex;
+
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    height: 100vh;
+    background: #1c1c1c;
+    flex-direction: column;
     align-items: center;
-    gap: 10px; /* or keep margin-right on icon */
-    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 40px;
+    transition: right 0.3s ease-in-out;
+    z-index: 1000;
+  }
+
+  .nav-links.active {
+    right: 0;
+  }
+
+  .hero-text {
+    padding: 0 20px;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .container {
+    flex-direction: column;
+  }
+
+  .about-img img {
+    width: 250px;
+  }
+
+  .contact-container {
+    flex-direction: column;
+  }
+}
+
+/* Tablet styles */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .hero-text {
+    max-width: 80%;
+  }
+
+  .container {
+    justify-content: space-around;
   }
 }
