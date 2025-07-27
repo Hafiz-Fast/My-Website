@@ -5,6 +5,11 @@
   scroll-behavior: smooth;
 }
 
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 body {
   background: #0f0f0f;
   color: #f0f0f0;
@@ -482,5 +487,11 @@ form button:hover {
 
   .container {
     justify-content: space-around;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-container {
+    padding: 0 20px 60px;
   }
 }
