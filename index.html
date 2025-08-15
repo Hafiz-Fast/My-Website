@@ -21,9 +21,31 @@
         <li class="nav-item">
           <a class="nav-link active" href="#">Home</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#about">About</a>
+        <li class="dropdown nav-item" onclick="HideUnderNav()">
+          <a class="dropbtn nav-link active" style="cursor: pointer;">About</a>
+          <ul class="dropdown-content">
+            <li class="nav-item">
+              <a class="nav-link active" href="#education">Education</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#experience">Experience</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#skills">Skills</a>
+            </li>
+          </ul>
         </li>
+
+        <li class="mobile-only nav-item">
+          <a class="nav-link active" href="#education">Education</a>
+        </li>
+        <li class="mobile-only nav-item">
+          <a class="nav-link active" href="#experience">Experience</a>
+        </li>
+        <li class="mobile-only nav-item">
+          <a class="nav-link active" href="#skills">Skills</a>
+        </li>
+
         <li class="nav-item">
           <a class="nav-link" href="#services">Services</a>
         </li>
@@ -39,41 +61,113 @@
     <div class="hero-text">
       <h1>Hi, I'm <span class="typewriter" data-text="Arham Zeeshan"></span></h1>
       <p>Computer Scientist | Full-Stack Enthusiast</p>
+      <p class="para">I am Arham Zeeshan, a Third Year Computer Science student at FAST Lahore. I enjoy creating web
+        apps,
+        games, and even machine learning models. I have worked with C++, Python, SQL, MERN, and ASP.NET, and I love
+        turning ideas into things people can use.
+      </p>
+    </div>
+
+    <div class="hero-image">
+      <img src="images/Me3.jpg" alt="Image" width="370px" height="370px">
     </div>
   </header>
 
-  <section id="about" class="glass-section">
+  <section id="education" class="glass-section">
     <div class="container">
-      <div class="about-img">
-        <img src="images/Me3.jpg" alt="Arham" />
+      <div id="education">
+        <h2>Education</h2>
+        <div class="education-item">
+          <h3>FAST National University of Computer & Emerging Sciences</h3>
+          <span class="degree">BS Computer Science</span>
+          <span class="date">Aug 2023 – Aug 2027</span>
+        </div>
+
+        <div class="education-item">
+          <h3>Punjab Group of Colleges</h3>
+          <span class="degree">F.Sc. Pre-Engineering</span>
+          <span class="date">May 2021 – May 2023</span>
+        </div>
+
+        <div class="education-item">
+          <h3>Unique Group of Instituitions</h3>
+          <span class="degree">Matriculation</span>
+          <span class="date">May 2019 – May 2021</span>
+        </div>
       </div>
-      <div class="about-text">
-        <h2>About Me</h2>
-        <p>I'm a Computer Science student at FAST-NUCES with experience in Unity, C++, Assembly Language, Web Dev
-          (React/Node), and AI (Chatbots & Dialogflow). Passionate about building tech from games to bots.</p>
-        <div class="tabs">
-          <button class="tablink active" onclick="openTab('skills')">Skills</button>
-          <button class="tablink" onclick="openTab('education')">Education</button>
-          <button class="tablink" onclick="openTab('experience')">Experience</button>
-        </div>
-        <div id="skills" class="tab-content active">
-          <ul>
-            <li><strong>Languages:</strong> C++, C, Python, Assembly, JavaScript</li>
-            <li><strong>Web:</strong> HTML, CSS, React.js, Node.js</li>
-            <li><strong>Game Dev:</strong> Unity, SFML, Pygame</li>
-            <li><strong>AI:</strong> Chatbots, Dialogflow, Flask</li>
+    </div>
+  </section>
+
+  <section id="experience" class="glass-section">
+    <div class="container">
+      <div id="education">
+        <h2>Experience</h2>
+        <div class="education-item">
+          <div class="experience-upper">
+            <h3>Web Development Intern</h3>
+            <span class="date">Jul 2025 – Present</span>
+          </div>
+          <span class="degree">CureMD</span>
+          <ul class="custom-arrows">
+            <li>Worked with Angular and Bootstrap to build responsive and pixel-perfect websites</li>
+            <li>Learned ASP.NET and its architecture to develop secure and maintainable backend systems.</li>
           </ul>
         </div>
-        <div id="education" class="tab-content">
-          <ul>
-            <li>Matriculation - UGI</li>
-            <li>FSc - PGC</li>
-            <li>BS CS - FAST NUCES</li>
+
+        <div class="education-item">
+          <div class="experience-upper">
+            <h3>Lab Demonstrator of Computer Organization and Assembly Language</h3>
+            <span class="date">Jan 2025 – Jun 2025</span>
+          </div>
+          <span class="degree">FAST Lahore</span>
+          <ul class="custom-arrows">
+            <li>Assisted 50+ students in understanding, developing, and debugging logic.</li>
+            <li>Provided guidance in Assembly Language and problem-solving.</li>
           </ul>
         </div>
-        <div id="experience" class="tab-content">
-          <p>Lab Demonstrator (COAL) <br>Helped peers learn and debug Assembly Language logic with clarity and patience.
-          </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="glass-section">
+    <div class="container">
+      <h2>Skills</h2>
+
+      <!-- Proficient -->
+      <div class="skills-category proficient">
+        <h3>Proficient</h3>
+        <div class="skills-grid">
+          <div class="skill-item"><i class="fa-solid fa-code"></i><span>C++</span></div>
+          <div class="skill-item"><i class="fa-brands fa-python"></i><span>Python</span></div>
+          <div class="skill-item"><i class="fa-solid fa-database"></i><span>SQL</span></div>
+          <div class="skill-item"><i class="fa-brands fa-html5"></i><span>HTML</span></div>
+          <div class="skill-item"><i class="fa-brands fa-css3-alt"></i><span>CSS</span></div>
+          <div class="skill-item"><i class="fa-brands fa-sass"></i><span>Sass</span></div>
+        </div>
+      </div>
+
+      <!-- Intermediate -->
+      <div class="skills-category intermediate">
+        <h3>Intermediate</h3>
+        <div class="skills-grid">
+          <div class="skill-item"><i class="fa-brands fa-js"></i><span>JavaScript</span></div>
+          <div class="skill-item"><i class="fa-brands fa-react"></i><span>React</span></div>
+          <div class="skill-item"><i class="fa-brands fa-node-js"></i><span>Node.js</span></div>
+          <div class="skill-item"><i class="fa-solid fa-code"></i><span>C#</span></div>
+          <div class="skill-item"><i class="fa-brands fa-angular"></i><span>Angular</span></div>
+          <div class="skill-item"><i class="fa-solid fa-server"></i><span>ASP.NET</span></div>
+        </div>
+      </div>
+
+      <!-- Familiar -->
+      <div class="skills-category familiar">
+        <h3>Familiar</h3>
+        <div class="skills-grid">
+          <div class="skill-item"><i class="fa-solid fa-microchip"></i><span>x86 Assembly</span></div>
+          <div class="skill-item"><i class="fa-brands fa-unity"></i><span>Unity 2D</span></div>
+          <div class="skill-item"><i class="fa-solid fa-gamepad"></i><span>SFML</span></div>
+          <div class="skill-item"><i class="fa-solid fa-ghost"></i><span>Pygame</span></div>
+          <div class="skill-item"><i class="fa-solid fa-comments"></i><span>Dialogflow ES</span></div>
         </div>
       </div>
     </div>
@@ -232,14 +326,6 @@
     }
     window.onload = type;
 
-    // Tab functionality
-    function openTab(tabId) {
-      document.querySelectorAll(".tab-content").forEach(tab => tab.classList.remove("active"));
-      document.querySelectorAll(".tablink").forEach(btn => btn.classList.remove("active"));
-      document.getElementById(tabId).classList.add("active");
-      event.currentTarget.classList.add("active");
-    }
-
     // Form submission
     const scriptURL = 'https://script.google.com/macros/s/AKfycbzzSwXRZbonzUjSUfXhYuL79DVbtPgRkIRvWGNqe-ygxax4KHQtEwpJ50ZTHpQbxi4WAw/exec';
     const form = document.forms['submit-to-google-sheet'];
@@ -265,6 +351,22 @@
         video.parentElement.classList.remove('video-loading');
       });
     });
+
+    function HideUnderNav() {
+      const dropdown = document.querySelector(".dropdown-content");
+      dropdown.style.display = "none";
+
+      // After a short delay, remove the inline style so hover works next time
+      setTimeout(() => {
+        dropdown.style.removeProperty("display");
+      }, 200);
+    }
+
+    // Attach to all sublinks
+    document.querySelectorAll(".dropdown-content a").forEach(link => {
+      link.addEventListener("click", HideUnderNav);
+    });
+
   </script>
 </body>
 

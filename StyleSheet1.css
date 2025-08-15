@@ -84,6 +84,44 @@ body {
   width: 100%;
 }
 
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background: #313030;
+  min-width: 100px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  top: 100%;
+  left: 0;
+  z-index: 999;
+}
+
+.dropdown-content li a {
+  padding: 10px 15px;
+  display: block;
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.dropdown-content li a:hover {
+  background: #666;
+}
+
+.mobile-only{
+  display: none;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
 /* Hero Section */
 /* Hero Section */
 .hero {
@@ -92,17 +130,16 @@ body {
   position: relative;
   padding-top: 0px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 }
 
 .hero-text {
-  text-align: center;
   max-width: 750px;
   width: 90%;
   opacity: 0;
   animation: fadeIn 1s ease-in-out forwards;
-  padding: 20px;
+  padding-left: 40px;
 }
 
 @keyframes fadeIn {
@@ -111,14 +148,40 @@ body {
 }
 
 .hero h1 {
-  font-size: 3rem;
+  font-size: 2.9rem;
   color: orangered;
-  margin-bottom: 20px;
 }
 
 .hero p {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
+  color: #E63946;
+  margin-top: 8px;
+}
+
+.hero .para{
+  margin-top: 20px;
+  font-size: 1.1rem;
   color: #ccc;
+  max-width: 650px;
+}
+
+.hero .hero-image{
+  padding-right: 40px;
+  margin-top: 60px;
+}
+
+.hero .hero-image  img{
+  border-radius: 20px;
+  box-shadow: 
+        0 0 15px rgba(255, 75, 0, 0.4),   /* soft orange glow */
+        0 0 30px rgba(255, 75, 0, 0.2);   /* bigger outer glow */
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.hero .hero-image  img:hover{
+  box-shadow: 
+        0 0 20px rgba(255, 75, 0, 0.6), 
+        0 0 40px rgba(255, 75, 0, 0.4);
 }
 
 .typewriter::after {
@@ -152,73 +215,168 @@ body {
 .glass-section {
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(10px);
-  padding: 60px 10%;
+  padding: 20px 5%;
   border-radius: 20px;
-  margin: 40px auto;
-  width: 90%;
+  margin: 40px;
   min-height: 500px;
 }
 
 .container {
-  display: flex;
-  flex-wrap: wrap;
   gap: 40px;
-  justify-content: center;
-  align-items: center;
   min-height: 400px;
 }
 
-.about-img img {
-  width: 300px;
-  border-radius: 20px;
-  box-shadow: 0 0 20px rgba(255, 69, 0, 0.5);
+.date {
+  font-size: 0.9rem;
+  font-weight: 300;
+  color: #bbb;
 }
 
-.about-text {
-  flex: 1;
-  min-width: 300px;
-  min-height: 300px;
+#education h2 {
+  margin-bottom: 30px;
+  font-size: 1.8rem;
+  font-weight: 500;
 }
 
-.tabs {
+/* Education/Experience Card */
+.education-item {
+  background: #262626;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 40px;
+  position: relative;
+  transition: transform 0.2s ease, background 0.2s ease, border 0.3s ease;
+  border: 2px solid transparent; /* default invisible border */
+}
+
+/* Full border on hover */
+.education-item:hover {
+  transform: translateY(-5px);
+  background: #2e2e2e;
+  border: 2px solid #E63946;
+}
+
+/* Visible vertical line (now inside safe area) */
+.education-item::before {
+  content: "";
+  position: absolute;
+  left: -12px; /* offset from box */
+  top: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(180deg, #E63946, #FF4B00);
+  border-radius: 2px;
+  z-index: -1; /* so it doesn’t cover text */
+}
+
+/* Make sure parent allows overflow */
+.glass-section,
+.container {
+  overflow: visible;
+}
+
+/* Title color */
+.education-item h3 {
+  color: #ff4c4c;
+  margin-bottom: 5px;
+}
+
+/* Custom reddish arrows */
+.education-item ul.custom-arrows {
+  list-style: none;
+  padding-left: 0;
   margin-top: 20px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
 }
 
-.tablink {
-  background: none;
-  border: none;
-  color: white;
-  font-size: 1rem;
-  padding: 8px 12px;
-  cursor: pointer;
-  border-bottom: 2px solid transparent;
-  transition: all 0.3s;
-}
-
-.tablink.active {
-  border-bottom: 2px solid orangered;
-  color: orangered;
-}
-
-.tab-content {
-  display: none;
-  margin-top: 20px;
-  min-height: 200px;
-}
-
-.tab-content.active {
-  display: block;
-}
-
-.tab-content ul {
-  list-style-position: inside;
-}
-
-.tab-content li {
+.education-item ul.custom-arrows li {
+  position: relative;
+  padding-left: 35px;
   margin-bottom: 8px;
+  color: lightgray;
+  font-weight: 300;
+}
+
+.education-item ul.custom-arrows li::before {
+  content: "➤";
+  position: absolute;
+  left: 0;
+  color: #E63946;
+  font-size: 18px;
+}
+
+.education-item .experience-upper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.degree {
+  display: block;
+  font-weight: 500;
+  color: #ccc;
+  margin-bottom: 5px;
+}
+
+/* Skills Section */
+#skills h2 {
+  margin-bottom: 30px;
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+/* Skill category containers */
+.skills-category {
+  margin-bottom: 40px; /* space after each category */
+}
+
+.skills-category h3 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 500;
+  margin-bottom: 15px; /* space below heading */
+}
+
+.skills-category.proficient h3 { color: #4CAF50; }   /* Green for Proficient */
+.skills-category.intermediate h3 { color: #FFC107; } /* Yellow for Intermediate */
+.skills-category.familiar h3 { color: #03A9F4; }     /* Blue for Familiar */
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 140px); /* fixed width columns */
+  grid-auto-rows: 140px; /* fixed height rows */
+  gap: 20px;
+  justify-content: center; /* center the grid items */
+}
+
+.skill-item {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  border: 2px solid transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.2s ease, background 0.2s ease, border 0.3s ease;
+  width: 140px; /* fixed width */
+  height: 140px; /* fixed height */
+}
+
+.skill-item:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 76, 76, 0.1);
+  border: 2px solid #E63946;
+}
+
+.skill-item i {
+  font-size: 42px; /* bigger icon */
+  margin-bottom: 14px; /* more space before text */
+  color: #E63946;
+}
+
+.skill-item span {
+  font-size: 1rem; /* slightly larger text */
+  color: lightgray;
 }
 
 /* Services */
@@ -454,6 +612,20 @@ form button:hover {
     right: 0;
   }
 
+  .mobile-only{
+    display: block;
+  }
+
+  .dropdown{
+    display: none;
+  }
+
+  .hero{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
   .hero-text {
     padding: 0 20px;
   }
@@ -464,6 +636,33 @@ form button:hover {
 
   .hero p {
     font-size: 1rem;
+  }
+
+  .hero .para{
+    font-size: 0.9rem;
+  }
+
+  .hero .hero-image{
+    display: none;
+  }
+
+  .education-item h3 {
+    font-size: 14px;
+  }
+
+  .education-item span{
+    font-size: 13px;
+  }
+
+  .education-item .degree{
+    margin-bottom: 1px;
+    padding-top: 2px;
+  }
+
+  .experience-upper{
+    flex-direction: column;
+    justify-content: start;
+    margin-bottom: 3px;
   }
 
   .container {
@@ -487,5 +686,9 @@ form button:hover {
 
   .container {
     justify-content: space-around;
+  }
+
+  .hero .hero-image{
+    display: none;
   }
 }
