@@ -676,6 +676,10 @@ form button:hover {
   .contact-container {
     padding: 0 20px 60px;
   }
+
+  .education-item ul.custom-arrows li{
+    font-size: 11px;
+  }
 }
 
 /* Tablet styles */
