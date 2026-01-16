@@ -455,13 +455,14 @@ body {
 
 .project-card h3 {
   color: orangered;
-  margin: 15px 0 10px;
+  margin: 15px 0 0px;
   min-height: 3rem; /* Fixed height for titles */
 }
 
 .project-card p {
   flex-grow: 1; /* Makes description take remaining space */
   margin-bottom: 15px;
+  font-size: 15px;
 }
 
 /* Loading indicator for videos */
