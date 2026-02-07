@@ -95,7 +95,7 @@ body {
   min-width: 100px;
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin: 0px -20px;
   top: 100%;
   left: 0;
   z-index: 999;
@@ -123,7 +123,6 @@ body {
 }
 
 /* Hero Section */
-/* Hero Section */
 .hero {
   height: 100vh;
   background: linear-gradient(to right, #0f0f0f, #1c1c1c);
@@ -132,6 +131,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  overflow: hidden; /* Add this to contain the blobs */
 }
 
 .hero-text {
@@ -140,6 +140,15 @@ body {
   opacity: 0;
   animation: fadeIn 1s ease-in-out forwards;
   padding-left: 40px;
+  position: relative; /* Add this */
+  z-index: 1; /* Add this to ensure text is above blobs */
+}
+
+.hero .hero-image {
+  padding-right: 40px;
+  margin-top: 60px;
+  position: relative; /* Add this */
+  z-index: 1; /* Add this to ensure image is above blobs */
 }
 
 @keyframes fadeIn {
@@ -150,6 +159,10 @@ body {
 .hero h1 {
   font-size: 2.9rem;
   color: orangered;
+}
+
+.hero-text h1 {
+  color: white;
 }
 
 .hero p {
@@ -182,6 +195,10 @@ body {
   box-shadow: 
         0 0 20px rgba(255, 75, 0, 0.6), 
         0 0 40px rgba(255, 75, 0, 0.4);
+}
+
+.typewriter {
+  color: orangered;
 }
 
 .typewriter::after {
@@ -419,7 +436,7 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
-  padding: 0 10% 60px;
+  padding: 0 6% 60px;
 }
 
 .project-card {
@@ -686,6 +703,10 @@ form button:hover {
   .education-item ul.custom-arrows li::before{
     bottom: 50%;
   }
+
+  .skills-grid{
+    grid-template-columns: repeat(auto-fill, 135px);
+  }
 }
 
 /* Tablet styles */
@@ -701,4 +722,46 @@ form button:hover {
   .hero .hero-image{
     display: none;
   }
+}
+
+/* Animated Blob Background */
+.hero-bg-blob {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.1;
+  animation: float 8s ease-in-out infinite;
+  z-index: 0;
+}
+
+.hero-bg-blob.primary {
+  width: 24rem;
+  height: 24rem;
+  background: orangered;
+  top: 25%;
+  left: 25%;
+}
+
+.hero-bg-blob.secondary {
+  width: 18rem;
+  height: 18rem;
+  background: #E63946;
+  bottom: 25%;
+  right: 25%;
+  animation-delay: -4s;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-20px) scale(1.05); }
+}
+
+/* Ensure hero content is above blobs */
+.hero {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-text, .hero-image {
+  position: relative;
+  z-index: 1;
 }
